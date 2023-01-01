@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <title>Inicjały SVG</title>
+    <style>
+      svg {
+        border: 1px solid black;
+        width: 300px;
+        height: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <svg id=" initials ">
+      <text x="50" y="50" font-size="50" fill="blue" id="ini">MP</text>
+    </svg>
+    <script>
+      const initials = document.getElementById("ini");
+	  lewo(){
+	  
+	  }
+
+      document.addEventListener("keydown", event => {
+         if (keyCode == 37) { // Strzałka w lewo
+        initials.x -= 10;
+      } else if (keyCode == 38) { // Strzałka w górę
+        initials.y -= 10;
+      } else if (keyCode == 39) { // Strzałka w prawo
+        initials.x += 10;
+      } else if (keyCode == 40) { // Strzałka w dół
+        initials.y += 10;
+      } else if (keyCode == 107) { // Klawisz +
+        initials.scale += 0.1;
+      } else if (keyCode == 109) { // Klawisz -
+        initials.scale -= 0.1;
+      } else if (keyCode == 82) { // Klawisz R
+        initials.rotation += 10;
+      } else if (keyCode == 67) { // Klawisz C
+        const colors = ['black', 'red', 'green', 'blue'];
+        const currentIndex = colors}
+		</script>
+		</body>
