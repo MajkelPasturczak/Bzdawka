@@ -10,18 +10,33 @@
     </style>
   </head>
   <body>
-    <svg id=" initials ">
-      <text x="50" y="50" font-size="50" fill="blue" id="ini">MP</text>
+    <svg id="initials">
+      <text x="50" y="50" font-size="50" fill="blue">MP</text>
     </svg>
     <script>
       const initials = document.getElementById("ini");
-	  lewo(){
-	  
-	  }
+function lewo() {
+  var svgElement = document.getElementById("initials");
 
+  var currentTransform = svgElement.getAttribute("transform");
+
+  
+  if (!currentTransform) {
+    currentTransform = "translate(0,0)";
+  }
+
+ 
+  var currentX = parseFloat(currentTransform.split("(")[1].split(",")[0]);
+
+ 
+  var newX = currentX - 10;
+
+ 
+  svgElement.setAttribute("transform", "translate(" + newX + ",0)");
+}
       document.addEventListener("keydown", event => {
          if (keyCode == 37) { // Strzałka w lewo
-        initials.x -= 10;
+        lewo()
       } else if (keyCode == 38) { // Strzałka w górę
         initials.y -= 10;
       } else if (keyCode == 39) { // Strzałka w prawo
@@ -37,5 +52,6 @@
       } else if (keyCode == 67) { // Klawisz C
         const colors = ['black', 'red', 'green', 'blue'];
         const currentIndex = colors}
+		}
 		</script>
 		</body>
